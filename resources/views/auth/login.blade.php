@@ -6,13 +6,15 @@
     <title>Login/Signup Form</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: "Poppins", sans-serif;
+            text-decoration: none;
+            list-style: none;
         }
 
         body {
@@ -54,8 +56,6 @@
             background: #fff;
             display: flex;
             align-items: center;
-            justify-content: center;
-            flex-direction: column;
             color: #333;
             text-align: center;
             padding: 40px;
@@ -70,8 +70,7 @@
 
         .input-box {
             position: relative;
-            margin: 20px 0;
-            width: 100%;
+            margin: 30px 0;
         }
 
         .input-box input {
@@ -102,7 +101,7 @@
         .btn {
             width: 100%;
             height: 48px;
-            background: #4481ea;
+            background: #4687f0;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, .1);
             border: none;
@@ -115,7 +114,6 @@
         .social-icons {
             display: flex;
             justify-content: center;
-            margin-top: 10px;
         }
 
         .social-icons a {
@@ -140,7 +138,7 @@
             left: -250%;
             width: 300%;
             height: 100%;
-            background: #4481ea;
+            background: #4687f0;
             border-radius: 150px;
             z-index: 2;
             transition: 1.8s ease-in-out;
@@ -159,8 +157,6 @@
             align-items: center;
             z-index: 2;
             transition: .6s ease-in-out;
-            text-align: center;
-            padding: 20px;
         }
 
         .toggle-panel.toggle-left {
@@ -183,9 +179,7 @@
             transition-delay: 1.2s;
         }
 
-        .toggle-panel p {
-            margin-bottom: 20px;
-        }
+        .toggle-panel p { margin-bottom: 20px; }
 
         .toggle-panel .btn {
             width: 160px;
@@ -243,6 +237,7 @@
 
         @media screen and (max-width: 400px) {
             .form-box { padding: 20px; }
+
             .toggle-panel h1 { font-size: 30px; }
         }
     </style>
@@ -250,57 +245,73 @@
 <body>
 
 <div class="container">
-    <!-- LOGIN FORM -->
+    {{-- LOGIN FORM --}}
     <div class="form-box login">
-        <form>
+        <form action="{{ route('login') }}" method="POST">
+            @csrf
             <h1>Login</h1>
+
+            @if ($errors->has('login'))
+                <p style="color: red;">{{ $errors->first('login') }}</p>
+            @endif
+
             <div class="input-box">
-                <input type="text" placeholder="Username" required>
+                <input type="text" name="username" placeholder="Username" value="{{ old('username') }}" required>
                 <i class='bx bxs-user'></i>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Password" required>
+                <input type="password" name="password" placeholder="Password" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
             <button type="submit" class="btn">Login</button>
             <p>or login with social platforms</p>
             <div class="social-icons">
-                <a href="#"><i class='bx bxl-google'></i></a>
-                <a href="#"><i class='bx bxl-facebook'></i></a>
-                <a href="#"><i class='bx bxl-github'></i></a>
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="mailto:namakamu@gmail.com" target="_blank"><i class='bx bxl-google'></i></a>
+                <a href="https://www.facebook.com/namakamu" target="_blank"><i class='bx bxl-facebook'></i></a>
+                <a href="https://github.com/namakamu" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/namakamu" target="_blank"><i class='bx bxl-linkedin'></i></a>
             </div>
         </form>
     </div>
 
-    <!-- REGISTER FORM -->
+    {{-- REGISTER FORM --}}
     <div class="form-box register">
-        <form>
+        <form action="{{ route('register') }}" method="POST">
+            @csrf
             <h1>Registration</h1>
+
+            @if ($errors->any())
+                <ul style="color: red; margin-bottom: 1rem;">
+                    @foreach ($errors->all() as $err)
+                        <li>{{ $err }}</li>
+                    @endforeach
+                </ul>
+            @endif
+
             <div class="input-box">
-                <input type="text" placeholder="Username" required>
+                <input type="text" name="username" placeholder="Username" value="{{ old('username') }}" required>
                 <i class='bx bxs-user'></i>
             </div>
             <div class="input-box">
-                <input type="email" placeholder="Email" required>
+                <input type="email" name="email" placeholder="Email" value="{{ old('email') }}" required>
                 <i class='bx bxs-envelope'></i>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Password" required>
+                <input type="password" name="password" placeholder="Password" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
             <button type="submit" class="btn">Register</button>
             <p>or register with social platforms</p>
             <div class="social-icons">
-                <a href="#"><i class='bx bxl-google'></i></a>
-                <a href="#"><i class='bx bxl-facebook'></i></a>
-                <a href="#"><i class='bx bxl-github'></i></a>
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="mailto:namakamu@gmail.com" target="_blank"><i class='bx bxl-google'></i></a>
+                <a href="https://www.facebook.com/namakamu" target="_blank"><i class='bx bxl-facebook'></i></a>
+                <a href="https://github.com/namakamu" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/namakamu" target="_blank"><i class='bx bxl-linkedin'></i></a>
             </div>
         </form>
     </div>
 
-    <!-- TOGGLE PANEL -->
+    {{-- TOGGLE PANEL --}}
     <div class="toggle-box">
         <div class="toggle-panel toggle-left">
             <h1>Hello, Welcome!</h1>
@@ -322,12 +333,10 @@
 
     registerBtn.addEventListener('click', () => {
         container.classList.add('active');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
     loginBtn.addEventListener('click', () => {
         container.classList.remove('active');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 </script>
 
