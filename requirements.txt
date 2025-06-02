@@ -1,0 +1,150 @@
+BimbelKita Application Requirements
+=================================
+
+SYSTEM REQUIREMENTS
+------------------
+
+1. PHP Environment:
+   - PHP version 8.2 or higher
+   - Required PHP Extensions:
+     * BCMath PHP Extension
+     * Ctype PHP Extension
+     * cURL PHP Extension
+     * DOM PHP Extension
+     * Fileinfo PHP Extension
+     * JSON PHP Extension
+     * Mbstring PHP Extension
+     * OpenSSL PHP Extension
+     * PCRE PHP Extension
+     * PDO PHP Extension
+     * Tokenizer PHP Extension
+     * XML PHP Extension
+
+2. Database:
+   - MySQL 5.7+ or MariaDB 10.3+
+   - SQLite (for development/testing)
+
+3. Web Server:
+   - Apache 2.4+ with mod_rewrite enabled
+   - OR Nginx 1.16+
+
+4. Node.js Environment:
+   - Node.js version 16.0 or higher
+   - NPM (Node Package Manager) version 8.0 or higher
+
+SOFTWARE REQUIREMENTS
+-------------------
+
+1. Composer (PHP Package Manager):
+   - Composer version 2.0 or higher
+   - Download from: https://getcomposer.org/
+
+2. Git:
+   - Latest version recommended
+   - Download from: https://git-scm.com/
+
+INSTALLATION STEPS
+-----------------
+
+1. Clone the Repository:
+   git clone [repository-url]
+   cd FinalProject_BimbelKita
+
+2. Install PHP Dependencies:
+   composer install
+
+3. Install JavaScript Dependencies:
+   npm install
+
+4. Environment Setup:
+   cp .env.example .env
+   php artisan key:generate
+
+5. Configure Database:
+   Update .env file with your database credentials:
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=your_database_name
+   DB_USERNAME=your_username
+   DB_PASSWORD=your_password
+
+6. Run Migrations:
+   php artisan migrate
+
+7. Build Assets:
+   npm run build
+
+8. Start the Application:
+   php artisan serve
+
+ADDITIONAL REQUIREMENTS
+----------------------
+
+1. PDF Generation:
+   - DomPDF Requirements:
+     * GD PHP Extension
+     * DOM PHP Extension
+     * MB String PHP Extension
+
+2. Browser Requirements:
+   - Modern web browsers (Chrome, Firefox, Safari, Edge)
+   - JavaScript enabled
+   - Cookies enabled
+
+3. Storage Requirements:
+   - Minimum 500MB free disk space
+   - Write permissions for storage and cache directories
+
+DEVELOPMENT TOOLS (OPTIONAL)
+--------------------------
+
+1. IDE/Code Editor:
+   - Visual Studio Code
+   - PHPStorm
+   - Sublime Text
+   - Or any PHP-compatible editor
+
+2. Development Extensions:
+   - Laravel extension for your IDE
+   - PHP Debug tools
+   - Git integration
+
+RECOMMENDED SERVER SPECIFICATIONS
+------------------------------
+
+1. Minimum Requirements:
+   - 1 CPU Core
+   - 2GB RAM
+   - 20GB Storage
+
+2. Recommended Requirements:
+   - 2+ CPU Cores
+   - 4GB+ RAM
+   - 40GB+ SSD Storage
+
+SECURITY NOTES
+-------------
+
+1. Ensure proper file permissions are set
+2. Configure secure HTTPS for production environments
+3. Keep all software components updated
+4. Follow Laravel security best practices
+
+TROUBLESHOOTING
+--------------
+
+If you encounter any issues during installation:
+
+1. Check PHP version compatibility
+2. Verify all required PHP extensions are installed
+3. Ensure proper database configuration
+4. Check file permissions in storage and cache directories
+5. Clear application cache:
+   php artisan cache:clear
+   php artisan config:clear
+   php artisan view:clear
+
+For additional support, please refer to the project documentation or create an issue in the repository.
+
+Last Updated: 2024-03-19
