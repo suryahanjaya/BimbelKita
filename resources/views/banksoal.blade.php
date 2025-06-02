@@ -1,8 +1,86 @@
-<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
 @extends('layouts.app')
+@push('styles')
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+    h2 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        color: #1f2937;
+        margin-bottom: 1.5rem;
+    }
+
+    .card {
+        font-family: 'Poppins', sans-serif;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        padding: 20px;
+        margin-bottom: 1.5rem;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    .card-header {
+        font-weight: 600;
+        font-size: 1.125rem;
+        color: #2563eb;
+        border-bottom: 2px solid #e0e7ff;
+        padding-bottom: 8px;
+        margin-bottom: 12px;
+    }
+
+    .card-body p, ul, ul li, .btn {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .card-body p {
+        margin-bottom: 10px;
+        line-height: 1.5;
+        color: #333;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin-bottom: 15px;
+        color: #374151;
+    }
+
+    ul li {
+        margin-bottom: 6px;
+        font-weight: 400;
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: #2563eb;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+        margin-top: 20px;
+    }
+
+    .btn:hover {
+        background-color: #1d4ed8;
+        color: white;
+    }
+
+    .mb-4 {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .mt-3 {
+        margin-top: 1rem !important;
+    }
+</style>
+@endpush
 @section('content')
 <h2 class="mb-4">Bank Soal UTBK</h2>
 
