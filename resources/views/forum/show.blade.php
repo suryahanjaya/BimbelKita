@@ -1,3 +1,290 @@
+<style>
+
+.za {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.zb {
+    margin-bottom: 20px;
+}
+
+.zc {
+    color: #3490dc;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.zc:hover {
+    text-decoration: underline;
+}
+
+/* Notifikasi */
+.ze {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 12px 15px;
+    border-radius: 5px;
+    color: #155724;
+    margin-bottom: 15px;
+}
+
+/* Judul Topik */
+.zg {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.zh {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 10px;
+}
+
+.zi {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.zj {
+    position: relative;
+    display: inline-block;
+}
+
+.zk {
+    background: #007bff;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.zm {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 120px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    border-radius: 4px;
+    z-index: 1000;
+    margin-top: 5px;
+    padding: 5px 0;
+    list-style: none;
+}
+
+.zm li {
+    padding: 8px 16px;
+}
+
+.zm li a, .zm li button {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Show dropdown on hover */
+.zj:hover .zm {
+    display: block;
+}
+
+.zm li:hover {
+    background-color: #f1f1f1;
+}
+
+
+.zn, .zq {
+    display: block;
+    padding: 8px 15px;
+    color: #333;
+    text-decoration: none;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+}
+
+.zq {
+    background: none;
+    cursor: pointer;
+}
+
+.zn:hover, .zq:hover {
+    background-color: #f0f0f0;
+}
+
+/* Info Topik */
+.zs {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.zv {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Komentar */
+.zx {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.zy {
+    margin-bottom: 20px;
+}
+
+.zz {
+    margin-bottom: 10px;
+}
+
+.zaa {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+.zab {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.zac {
+    background-color: #3490dc;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.zac:hover {
+    background-color: #2779bd;
+}
+
+.zad {
+    font-size: 14px;
+}
+
+.zad a {
+    color: #3490dc;
+    font-weight: bold;
+}
+
+.zae {
+    margin-top: 25px;
+}
+
+.zaf {
+    margin-bottom: 25px;
+    border-left: 3px solid #3490dc;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+.zaj {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.zak {
+    font-size: 15px;
+    margin: 5px 0;
+}
+
+.zal {
+    margin-top: 8px;
+}
+
+.zal .btn {
+    font-size: 13px;
+    color: #555;
+}
+
+.zan form {
+    margin-top: 10px;
+}
+
+.zap {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.zaq {
+    background-color: #38c172;
+    color: white;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.zaq:hover {
+    background-color: #2d995b;
+}
+
+.zas {
+    margin-left: 25px;
+    margin-top: 10px;
+    border-left: 2px dashed #ccc;
+    padding-left: 15px;
+}
+
+.zaw {
+    font-size: 13px;
+    color: #888;
+}
+
+.zax {
+    font-size: 14px;
+    margin-top: 3px;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    .zh {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .zm {
+        right: auto;
+        left: 0;
+    }
+
+    .zaq, .zac {
+        width: 100%;
+        text-align: center;
+    }
+}
+</style>
+
 @extends('layouts.app')
 
 @section('content')
@@ -146,7 +433,7 @@ $(document).ready(function() {
     $('.reply-toggle').click(function(e) {
         e.preventDefault();
         const commentId = $(this).data('comment-id');
-        const replyForm = $(`#reply-form-${commentId}`);
+        const replyForm = $(#reply-form-${commentId});
         
         // Hide all other reply forms
         $('.reply-form').not(replyForm).slideUp();
@@ -191,4 +478,4 @@ $(document).ready(function() {
 </style>
 @endsection
 
-@endsection 
+@endsection
