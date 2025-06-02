@@ -1,10 +1,164 @@
 @extends('layouts.app')
 
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.hasil {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+.rounded-lg {
+    border-radius: 12px;
+}
+
+.shadow-md {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.p-6 {
+    padding: 1.5rem;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.text-gray-600 {
+    color: #718096;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+}
+
+.text-blue-600 {
+    color: #60a5fa;
+}
+
+.text-orange-400 {
+    color: #fbbf24;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.space-y-4 > * + * {
+    margin-top: 1rem;
+}
+
+.border {
+    border: 1px solid #e2e8f0;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.min-w-full {
+    min-width: 100%;
+}
+
+.border-b {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.bg-blue-50 {
+    background-color: #ebf8ff;
+}
+
+.table th {
+    background-color: #bfdbfe;
+}
+
+.table tr.bg-blue-50 {
+    background-color: #fef3c7; 
+}
+
+.KD {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #60a5fa;
+    color: white;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.KD:hover {
+    background-color: #3b82f6;
+}
+
+</style>
+
 @section('content')
 <div class="container mx-auto px-4 py-8">
     <div class="max-w-4xl mx-auto">
         <!-- Header -->
-        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+        <div class="hasil">
             <div class="text-center">
                 <h1 class="text-3xl font-bold mb-2">Hasil Tryout</h1>
                 <p class="text-xl text-gray-600">{{ $session->tryoutType->name }}</p>
@@ -76,7 +230,8 @@
             <a href="{{ route('tryout.index') }}" class="KD">
                 Kembali ke Daftar Tryout
             </a>
+            <br>
         </div>
     </div>
 </div>
-@endsection 
+@endsection
