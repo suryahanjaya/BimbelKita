@@ -1,6 +1,183 @@
-<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<style>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
+.pa {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pb {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.pc h1.pd {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2364aa;
+    margin-bottom: 1.5rem;
+}
+
+.pe {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.pf, .pi, .pl {
+    flex: 1;
+    background-color: #dbeafe;
+    border-left: 5px solid #3b82f6;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.pg, .pj, .pm {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1d4ed8;
+}
+
+.ph, .pk, .pn {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e3a8a;
+}
+
+.po .pq {
+    background-color: #fff7ed;
+    border-left: 5px solid #f97316;
+    padding: 1rem;
+    border-radius: 8px;
+    color: #92400e;
+    font-weight: 500;
+}
+
+.pr {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pu {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: #ffffff;
+}
+
+.pu.bg-green-50 {
+    background-color: #ecfdf5;
+    border-color: #10b981;
+}
+
+.ps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pt {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2364aa;
+}
+
+.pv {
+    color: #4b5563;
+    font-size: 0.95rem;
+    margin-top: 0.25rem;
+}
+
+.pw {
+    text-align: right;
+}
+
+.px {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.py {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #f97316;
+}
+
+.pz {
+    margin-top: 2rem;
+}
+
+.pab, .pak {
+    margin-bottom: 2rem;
+}
+
+.pac, .pal {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+}
+
+.pae, .pan {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.paf, .pao {
+    background-color: #e0f2fe;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 5px solid #3b82f6;
+}
+
+.pag, .pap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pah, .paq {
+    font-weight: 600;
+    color: #1e40af;
+}
+
+.pai, .par {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.paj, .pas {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+.pat {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.pau {
+    display: inline-block;
+    background-color: #3b82f6;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.pau:hover {
+    background-color: #2563eb;
+}
+</style>
 @extends('layouts.app')
 
 @section('content')
