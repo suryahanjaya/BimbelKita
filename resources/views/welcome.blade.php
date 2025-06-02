@@ -1,6 +1,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="{{ asset('st.css') }}">
+<link rel="stylesheet" href="{{ asset('style.css') }}">
 
 @extends('layouts.app')
 
@@ -12,25 +12,25 @@
 <h4>Materi TryOut</h4>
 <div class="slider">
   <div class="slides">
-    <a href="http://127.0.0.1:8000/storage/materi/TPS/PU1.pdf" target="_blank">
+    <a href="{{ asset('storage/materi/TPS/PU1.pdf') }}" target="_blank">
       <img src="{{ asset('images/PU.png') }}" alt="PU">
     </a>
-    <a href="http://127.0.0.1:8000/storage/materi/TPS/PPU1.pdf">
+    <a href="{{ asset('storage/materi/TPS/PPU1.pdf') }}" target="_blank">
       <img src="{{ asset('images/PPU.png') }}" alt="PPU">
     </a>
-    <a href="http://127.0.0.1:8000/storage/materi/TPS/PB2.pdf">
+    <a href="{{ asset('storage/materi/TPS/PB2.pdf') }}" target="_blank">
       <img src="{{ asset('images/PBM.png') }}" alt="PBM">
     </a>
-    <a href="http://127.0.0.1:8000/storage/materi/TPS/PK1.pdf">
+    <a href="{{ asset('storage/materi/TPS/PK1.pdf') }}" target="_blank">
       <img src="{{ asset('images/PK.png') }}" alt="PK">
     </a>
-    <a href="http://127.0.0.1:8000/storage/materi/Literasi/BI1.pdf">
+    <a href="{{ asset('storage/materi/Literasi/BI1.pdf') }}" target="_blank">
       <img src="{{ asset('images/LBI.png') }}" alt="LBI">
     </a>
-    <a href="http://127.0.0.1:8000/storage/materi/Literasi/E1.pdf">
+    <a href="{{ asset('storage/materi/Literasi/E1.pdf') }}" target="_blank">
       <img src="{{ asset('images/LBING.png') }}" alt="LBING">
     </a> 
-    <a href="http://127.0.0.1:8000/storage/materi/Literasi/MTK1.pdf">
+    <a href="{{ asset('storage/materi/Literasi/MTK1.pdf') }}" target="_blank">
       <img src="{{ asset('images/PM.png') }}" alt="PM">
     </a>
   </div>
