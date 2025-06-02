@@ -148,7 +148,7 @@
                 <div class="col-md-4 mb-4">
                     <div class="card h-100">
                         @if ($class->foto)
-                            <img src="{{ asset('storage/' . $class->foto) }}" class="card-img-top" alt="Foto Live Class">
+                            <img src="{{ asset('images/' . $class->foto) }}" class="card-img-top" alt="Foto Live Class">
                         @endif
                         <div class="card-body">
                             @if ($status === 'aktif')
