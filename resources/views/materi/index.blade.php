@@ -252,7 +252,7 @@ p {
           <div class="text-start mt-2">
             {{-- Tombol download --}}
             @if ($materi->file_path)
-              <a href="{{ asset('images/' . $materi->file_path) }}" class="btn btn-sm btn-primary me-2" download>
+              <a href="{{ asset('images/materi/' . $materi->file_path) }}" class="btn btn-sm btn-primary me-2" download>
                 Download PDF
               </a>
             @endif
