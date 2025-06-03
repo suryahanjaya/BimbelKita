@@ -45,16 +45,8 @@ form .form-select:focus {
 }
 
 .list-group-item {
-  padding: 2rem 2.5rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgb(0 0 0 / 0.05);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
 }
 
 .list-group-item:last-child {
@@ -68,29 +60,14 @@ form .form-select:focus {
 }
 
 .materi-img {
-  display: block;
-  margin: 0 auto 12px auto;
   width: 100%;
   max-width: 250px;
   height: 140px;
-  object-fit: contain;
+  object-fit: contain; 
   border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-
-.materi-card {
-  padding: 1.5rem 2rem;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  margin-bottom: 1.5rem;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  display: block;
 }
 
 p {
@@ -196,76 +173,76 @@ p {
 
 {{-- Cek apakah ada materi --}}
 @if($materis->count())
-  <div class="row">
+  <ul class="list-group">
     @foreach($materis as $materi)
-      <div class="col-md-6 mb-3">
-        <div class="materi-card">
-          <h5>{{ $materi->judul }}</h5>
+      <li class="list-group-item">
+        <h5>{{ $materi->judul }}</h5>
 
-          {{-- Gambar sesuai ID materi --}}
-          @switch($materi->id)
-            @case(8)
-                <img src="{{ asset('images/PU.png') }}" alt="PU" class="materi-img mb-2">
-                @break
-            @case(9)
-                <img src="{{ asset('images/PU1.png') }}" alt="LBI1" class="materi-img mb-2">
-                @break
-            @case(10)
-                <img src="{{ asset('images/PPU.png') }}" alt="LBING" class="materi-img mb-2">
-                @break
-            @case(11)
-                <img src="{{ asset('images/PPU1.png') }}" alt="LBING1" class="materi-img mb-2">
-                @break
-            @case(12)
-                <img src="{{ asset('images/PBM.png') }}" alt="PBM" class="materi-img mb-2">
-                @break
-            @case(13)
-                <img src="{{ asset('images/PBM1.png') }}" alt="PBM1" class="materi-img mb-2">
-                @break
-            @case(14)
-                <img src="{{ asset('images/PK.png') }}" alt="PK" class="materi-img mb-2">
-                @break
-            @case(15)
-                <img src="{{ asset('images/PK1.png') }}" alt="PK1" class="materi-img mb-2">
-                @break
-            @case(16)
-                <img src="{{ asset('images/LBI.png') }}" alt="PM" class="materi-img mb-2">
-                @break
-            @case(17)
-                <img src="{{ asset('images/LBI1.png') }}" alt="PM1" class="materi-img mb-2">
-                @break
-            @case(18)
-                <img src="{{ asset('images/LBING.png') }}" alt="PPU1" class="materi-img mb-2">
-                @break
-            @case(19)
-                <img src="{{ asset('images/LBING1.png') }}" alt="PU" class="materi-img mb-2">
-                @break
-            @case(20)
-                <img src="{{ asset('images/PM.png') }}" alt="PU1" class="materi-img mb-2">
-                @break
-            @default
-                <img src="{{ asset('images/PM1.png') }}" alt="Default" class="materi-img mb-2">
-          @endswitch
+        {{-- Gambar sesuai ID materi --}}
+      @switch($materi->id)
+        @case(8)
+            <img src="{{ asset('images/PU.png') }}" alt="PU" class="materi-img mb-2">
+            @break
+        @case(9)
+            <img src="{{ asset('images/PU1.png') }}" alt="LBI1" class="materi-img mb-2">
+            @break
+        @case(10)
+            <img src="{{ asset('images/PPU.png') }}" alt="LBING" class="materi-img mb-2">
+            @break
+        @case(11)
+            <img src="{{ asset('images/PPU1.png') }}" alt="LBING1" class="materi-img mb-2">
+            @break
+        @case(12)
+            <img src="{{ asset('images/PBM.png') }}" alt="PBM" class="materi-img mb-2">
+            @break
+        @case(13)
+            <img src="{{ asset('images/PBM1.png') }}" alt="PBM1" class="materi-img mb-2">
+            @break
+        @case(14)
+            <img src="{{ asset('images/PK.png') }}" alt="PK" class="materi-img mb-2">
+            @break
+        @case(15)
+            <img src="{{ asset('images/PK1.png') }}" alt="PK1" class="materi-img mb-2">
+            @break
+        @case(16)
+            <img src="{{ asset('images/LBI.png') }}" alt="PM" class="materi-img mb-2">
+            @break
+        @case(17)
+            <img src="{{ asset('images/LBI1.png') }}" alt="PM1" class="materi-img mb-2">
+            @break
+        @case(18)
+            <img src="{{ asset('images/LBING.png') }}" alt="PPU1" class="materi-img mb-2">
+            @break
+        @case(19)
+            <img src="{{ asset('images/LBING1.png') }}" alt="PU" class="materi-img mb-2">
+            @break
+        @case(20)
+            <img src="{{ asset('images/PM.png') }}" alt="PU1" class="materi-img mb-2">
+            @break
+        @default
+            <img src="{{ asset('images/PM1.png') }}" alt="Default" class="materi-img mb-2">
+       @endswitch
 
-          <p>{{ $materi->deskripsi }}</p>
+        <p>{{ $materi->deskripsi }}</p>
 
-          <div class="text-start mt-2">
-            {{-- Tombol download --}}
-            @if ($materi->file_path)
-              <a href="{{ asset('images/materi/' . $materi->file_path) }}" class="btn btn-sm btn-primary me-2" download>
-                Download PDF
-              </a>
-            @endif
+      
+        <div class="text-start mt-2">
+        {{-- Tombol download --}}
+         @if ($materi->file_path)
+         <a href="{{ asset('storage/' . $materi->file_path) }}" class="btn btn-sm btn-primary me-2" download>
+          Download PDF
+          </a>
+          @endif
 
-            {{-- Tombol lihat detail --}}
-            <a href="{{ asset('images/' . $materi->file_path) }}" target="_blank" class="btn btn-sm btn-info">
-              Lihat Detail
-            </a>
-          </div>
+         {{-- Tombol lihat detail --}}
+          <a href="{{ asset('storage/' . $materi->file_path) }}" target="_blank" class="btn btn-sm btn-info">
+          Lihat Detail
+          </a>
         </div>
-      </div>
+        
+      </li>
     @endforeach
-  </div>
+  </ul>
 @else
   <p>Tidak ada materi ditemukan.</p>
 @endif
