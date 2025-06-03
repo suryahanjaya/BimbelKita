@@ -293,7 +293,7 @@ h2 {
 
   <div class="text-center mt-5">
     <a href="{{ route('live-class.index') }}">
-      <img src="{{ asset('images/Live.png') }}" alt="Live BimbelKita" class="img-fluid">
+      <img src="{{ asset('images/live.png') }}" alt="Live BimbelKita" class="img-fluid">
     </a>
   </div>
 @endsection
