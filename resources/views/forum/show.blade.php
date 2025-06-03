@@ -386,7 +386,7 @@
                                         </button>
                                     </div>
 
-                                    <div class="zan" id="reply-form-{{ $comment->id }}" style="display: none;">
+                                    <div class="zan reply-form" id="reply-form-{{ $comment->id }}" style="display: none;">
                                         <form action="{{ route('forum.comments.store', $topic) }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="parent_id" value="{{ $comment->id }}">
@@ -433,14 +433,14 @@ $(document).ready(function() {
     $('.reply-toggle').click(function(e) {
         e.preventDefault();
         const commentId = $(this).data('comment-id');
-        const replyForm = $(#reply-form-${commentId});
-        
+        const replyForm = $(`#reply-form-${commentId}`); // ← pakai backtick di sini!
+
         // Hide all other reply forms
         $('.reply-form').not(replyForm).slideUp();
-        
+
         // Toggle this reply form
         replyForm.slideToggle();
-        
+
         // Focus on textarea if showing form
         if (replyForm.is(':visible')) {
             replyForm.find('textarea').focus();
@@ -454,6 +454,7 @@ $(document).ready(function() {
         }
     });
 });
+
 </script>
 @endpush
 
