@@ -8,10 +8,10 @@
     /* Logo */
     .custom-navbar .navbar-brand {
       padding: 0.25rem 1rem; 
-      margin-left: -170px;
+      margin-left: -150px;
     }
     .custom-navbar .navbar-brand .logo {
-      height: 60px;
+      height: 40px;
       transition: opacity 0.3s ease;
       cursor: pointer;
       display: block;
@@ -30,7 +30,8 @@
     .custom-navbar .nav-link {
       color: #4e4c4c;
       font-weight: 800; 
-      transition: color 0.3s ease;
+      transition: color 0.5s ease;
+      font-size: 14px;
     }
     .custom-navbar .nav-link:hover,
     .custom-navbar .nav-link:focus {
