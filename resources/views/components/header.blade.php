@@ -112,7 +112,7 @@
           <a class="nav-link" href="{{ route('tryout.index') }}">TryOut</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('ptn.index') }}">PTN & Jurusan</a>
+          <a class="nav-link" href="{{ route('ptn.index') }}">Rekomendasi PTN</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ route('banksoal') }}">Bank Soal</a>
